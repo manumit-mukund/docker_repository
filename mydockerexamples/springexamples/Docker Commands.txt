@@ -1,0 +1,7 @@
+cd C:\mygitrepositories\docker_repository\mydockerexamples\springexamples\springcontrollerfordocker
+
+build -t springcontrollerfordockerim .
+
+docker run -p 9900:8080 springcontrollerfordockerim
+
+http://localhost:9900/docker/getvalues
