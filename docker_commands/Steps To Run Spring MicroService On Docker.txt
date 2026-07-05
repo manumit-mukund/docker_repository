@@ -1,0 +1,16 @@
+Steps to run a Spring MicroService on Docker on Window 10 Pro (example given below):
+
+1. Create folder, e.g.,  C:\mygitrepositories\docker_repository\mydockerexamples\springexamples\springcontroller
+2. Create a java file, e.g., DockerSpringApplication.java in a package in the above folder
+3. Create a java file, e.g., DockerController.java in a package in the above folder
+4. Create a pom.xml file in the above folder
+5. Run pom.xml to create dockerspring-0.0.1-SNAPSHOT.jar in the target folder of the above folder
+6. Create folder, e.g., C:\mygitrepositories\docker_repository\mydockerexamples\springexamples\springcontrollerfordocker
+7. Copy dockerspring-0.0.1-SNAPSHOT.jar from the target folder to the above folder
+8. Create a docker file, Dockerfile, without any extension in the above folder
+9. Start Desktop Docker (download it if not available on your machine, e.g, Docker version 26.1.4, build 5650f9b)
+10. Open Command Prompt (Run as administrator) and run the following commands
+11. cd C:\mygitrepositories\docker_repository\mydockerexamples\springexamples\springcontrollerfordocker
+12. docker build -t springcontrollerfordocker_image .
+13. docker run -p 9001:9001 springcontrollerfordocker_image
+14. Open any broswer and type in: http://localhost:9001/docker/hello
